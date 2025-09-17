@@ -59,11 +59,14 @@ SmartExpenseTracker/
 ├─ requirements.txt        # Python dependencies
 └─ README.md
 ```
+---
+
 ## Team Members
 
 1. Person A – Expense Tracker core logic
 2. Person B – Receipt OCR module
 3. Person C – Streamlit UI + documentation
+---
 
 ## Usage
 
@@ -72,6 +75,7 @@ SmartExpenseTracker/
 - Review the suggested category and confirm or edit
 - View expense summaries via charts
 - Expenses are saved automatically for future sessions
+---
 
 ## License
 This project is for educational purposes. Dataset licenses apply as per Kaggle datasets.
