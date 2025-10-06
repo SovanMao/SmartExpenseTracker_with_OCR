@@ -38,11 +38,11 @@ You may add your own sample receipts in a `dataset/` folder for demo purposes.
 
 ## Installation
 
-git clone https://github.com/yourusername/SmartExpenseTracker.git
+git clone https://github.com/SovanMao/SmartExpenseTracker_with_OCR.git
 pip install -r requirements.txt
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/SmartExpenseTracker_with_OCR.git
+git clone https://github.com/SovanMao/SmartExpenseTracker_with_OCR.git
 cd SmartExpenseTracker_with_OCR
 ```
 2. **Install Python 3.x dependencies:**
@@ -51,7 +51,7 @@ pip install -r requirements.txt
 ```
 3. **Run the Streamlit app:**
 ```bash
-streamlit run src/app.py
+streamlit run app.py
 ```
 
 ## Project Structure
@@ -64,7 +64,6 @@ SmartExpenseTracker_with_OCR/
 │   └─ app.py                # Streamlit UI
 ├─ documentation/            # Docs and documentation
 │   ├─ Smart Expense Tracker with Receipt OCR and Auto-Categorization.docx
-│   └─ WBS.xlsx              # Work Breakdown Structure
 ├─ requirements.txt          # Python dependencies
 └─ README.md
 ```
