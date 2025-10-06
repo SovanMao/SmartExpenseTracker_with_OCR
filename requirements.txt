@@ -1,0 +1,8 @@
+streamlit
+pandas
+matplotlib
+plotly
+Pillow
+easyocr
+dateparser
+transformers

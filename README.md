@@ -1,80 +1,90 @@
 # Smart Expense Tracker with Receipt OCR
 
 ## Project Overview
-This is a **Python-based Expense Tracker** that allows users to log, manage, and visualize personal expenses.  
-It also integrates **Receipt OCR** functionality using `pytesseract` to automatically extract expense details (amount, date, vendor) from receipt images and suggest categories for user confirmation.
 
-The app provides:
+This is a **Python-based Smart Expense Tracker** that allows users to log, manage, and visualize personal expenses with a modern web interface.
+It integrates **Receipt OCR** functionality using `easyocr` and `transformers` to automatically extract expense details (amount, date, vendor, category) from receipt images and suggest categories using AI.
+
+
+**Key Features:**
 - Manual and receipt-based expense entry
-- Auto-suggested categories
-- Summary charts (pie chart by category, line chart by month)
-- Streamlit interactive UI for a smooth demo
+- AI-powered auto-suggested categories
+- Summary charts (pie, line, bar) for spending analysis
+- Streamlit interactive UI for a smooth experience
 
 ---
 
 ## Dataset
-We use two datasets for testing OCR functionality:
+
+You can use public datasets for testing OCR functionality:
 
 1. [High-Quality Invoice Images for OCR](https://www.kaggle.com/datasets/osamahosamabdellatif/high-quality-invoice-images-for-ocr)  
 2. [Invoice OCR Dataset](https://www.kaggle.com/datasets/senju14/invoice-ocr)
 
-Sample receipts are included in the `dataset/` folder for demo purposes.
+
+You may add your own sample receipts in a `dataset/` folder for demo purposes.
 
 ---
 
+
 ## Features
 - Add expenses manually
-- Upload receipt images and extract data automatically
-- Auto-suggest categories with user confirmation
-- View summaries with pie and line charts
+- Upload receipt images and extract data automatically (OCR)
+- AI-powered category suggestion (with fallback to keyword matching)
+- View summaries with pie, line, and bar charts
 - Save and load expense data (CSV/JSON)
 
 ---
 
 ## Installation
 
-1. Clone the repository:
-```
 git clone https://github.com/yourusername/SmartExpenseTracker.git
+pip install -r requirements.txt
+1. **Clone the repository:**
+```bash
+git clone https://github.com/yourusername/SmartExpenseTracker_with_OCR.git
+cd SmartExpenseTracker_with_OCR
 ```
-2. Install Python 3.x dependencies:
-```
+2. **Install Python 3.x dependencies:**
+```bash
 pip install -r requirements.txt
 ```
-3. Run the Streamlit app:
-```
+3. **Run the Streamlit app:**
+```bash
 streamlit run src/app.py
 ```
-Project Structure
+
+## Project Structure
 ```
-SmartExpenseTracker/
+SmartExpenseTracker_with_OCR/
 │
-├─ dataset/                # Sample receipt images
-├─ src/                    # Python source code
-│   ├─ expense_tracker.py  # Core tracker logic
-│   ├─ receipt_ocr.py      # OCR + parsing
-│   └─ app.py              # Streamlit UI
-├─ documentation/          # Docs and screenshots
-├─ WBS.xlsx                # Work Breakdown Structure & progress tracker
-├─ requirements.txt        # Python dependencies
+├─ src/                      # Python source code
+│   ├─ expense_tracker.py    # Core tracker logic
+│   ├─ reciept_ocr.py        # OCR + AI category suggestion
+│   └─ app.py                # Streamlit UI
+├─ documentation/            # Docs and documentation
+│   ├─ Smart Expense Tracker with Receipt OCR and Auto-Categorization.docx
+│   └─ WBS.xlsx              # Work Breakdown Structure
+├─ requirements.txt          # Python dependencies
 └─ README.md
 ```
 ---
 
 ## Team Members
 
-1. Person A – Expense Tracker core logic
-2. Person B – Receipt OCR module
-3. Person C – Streamlit UI + documentation
+- Person A – Expense Tracker core logic
+- Person B – Receipt OCR & AI module
+- Person C – Streamlit UI & documentation
 ---
 
 ## Usage
 
 - Launch the app using Streamlit
-- Add an expense manually or upload a receipt image
-- Review the suggested category and confirm or edit
-- View expense summaries via charts
-- Expenses are saved automatically for future sessions
+- Add an expense manually or upload a receipt image (JPG, PNG, etc.)
+- Review the extracted details and suggested category (AI-powered)
+- Confirm or edit before saving
+- View expense summaries and analytics via interactive charts
+- Expenses are saved automatically for future sessions (CSV)
 ---
 
 ## License
